@@ -1,5 +1,5 @@
 import { RouteObject, createBrowserRouter, createHashRouter } from 'react-router-dom';
-import { ROUTES } from './constants/common';
+import { ROUTERS } from './constants/common';
 import SignInPage from './pages/auth/SignInPage';
 import ProtectedRoute from './components/ProtectedRoute';
 import HomePage from './pages/home/HomePage';
@@ -11,13 +11,13 @@ export const routerObjects: (RouteObject & {
   subtitle?: string;
 })[] = [
   {
-    title: ROUTES.LOGIN.TITLE,
-    path: ROUTES.LOGIN.PATH,
+    title: ROUTERS.LOGIN.TITLE,
+    path: ROUTERS.LOGIN.PATH,
     Component: SignInPage
   },
   {
-    title: ROUTES.HOME.TITLE,
-    path: ROUTES.HOME.PATH,
+    title: ROUTERS.HOME.TITLE,
+    path: ROUTERS.HOME.PATH,
     Component: () => {
       return (
         <ProtectedRoute>
